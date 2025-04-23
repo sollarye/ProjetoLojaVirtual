@@ -14,7 +14,8 @@ include 'header.php';
 if(isset($_SESSION['login'])){
     if(isset($_GET['pagina'])){
         $pagina = $_GET['pagina'];
-    };
+    }
+
     else{
         $pagina = 'teste';
     }

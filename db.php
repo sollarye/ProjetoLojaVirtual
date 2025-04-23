@@ -5,4 +5,4 @@ $usuario = "root";
 $senha = "";
 $db = "controle";
 
-$conexao = mysqliconnect($servidor, $usuario, $senha, $db)
+$conexao = mysqli_connect($servidor, $usuario, $senha, $db);
