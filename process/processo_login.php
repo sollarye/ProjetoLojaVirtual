@@ -16,10 +16,10 @@ if (mysqli_num_rows($consulta)==1){
     $_SESSION['login']=true;
     $_SESSION['email']=$email;
 
-    header('location:index.php');
+    header('location:../views/teste.php');
 }
 
 else{
     /* echo 'usuário e /ou senha inválido(s).;*/
-    header('location:index.php?erro');
+    header('location:../views/login.php?erro');
 }

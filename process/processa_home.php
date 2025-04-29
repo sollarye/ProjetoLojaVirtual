@@ -3,13 +3,13 @@
 #iniciar seção
 session_start();
 
-#base de dados
+# Base de dados
 include 'db.php';
 
-#cabeçalho
-include 'header.php';
+# Cabeçalho
+include '../header.php';
 
-#conteúdo da página
+# Conteúdo da página
 
 if(isset($_SESSION['login'])){
     if(isset($_GET['pagina'])){
@@ -32,5 +32,7 @@ switch($pagina) {
     break;
 }
 
-#rodapé
-include 'footer.php';
+# Rodapé
+include '../footer.php';
+
+# HOME - TELA DOS JOGOS
