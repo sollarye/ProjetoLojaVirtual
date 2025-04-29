@@ -1,155 +1,146 @@
-<style>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family:'Open Sans', sans-serif;
+            background-color:#793e9f;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family:'Open Sans', sans-serif;
-    background-color:#793e9f;
-    margin: 0;
-    padding: 0;
-}
+        h1 {
+            color:#e8c283;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 70px;
+            margin-bottom: 85px;
+        }
 
-h1 {
-    color:#e8c283;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 70px;
-}
+        form {
+            background-color: #fff;
+            border-radius: 28px;
+            width: 80%;
+            max-width: 700px;
+            padding: 20px;
+            margin: 30px auto;
+            height: 465px;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
 
-form{
-    clear:both;
-    background-color: #fff;
-    border-radius: 28px;
-    width: 60%;
-    max-width: 500px; /*O formulário não pode passar de 500px de largura, mesmo que o contêiner ou a janela do navegador seja maior.*/
-    padding: 20px;
-    margin: 30px auto;
-    height:400px;
-    justify-content: center;
-    text-align: center;
+        #logo {
+        background: #793e9f;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: -70px auto 20px;
+        border: 2px solid #fff;
+        }
 
-}
+        label {
+            font-size: 16px;
+            font-family:'Open Sans', sans-serif;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+            margin-left: 135px;
+        }
 
-#logo{
-    background:#793e9f;
-    width:100px;
-    height:100px;
-    border: 1px solid red;
-    border-radius: 100%;
-    float:left;
-    position: relative;
-    bottom:60px;
-    left:40%;
-   
-}
+        input[type="text"],
+        input[type="password"] {
+            width: 400px;
+            height:30px;
+            padding: 8px;
+            border-radius: 15px;
+        }
 
-.campo{
-    justify-content:left;
-    align-items:left;
-}
+        input[type="submit"] {
+            background-color: #fcbf5b;
+            color: #793e9f;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 30px auto 0;
+            display: inline-block;
+        }
 
-label{
-    clear:both;
-    font-size: 16;
-    font-family:'Open Sans', sans-serif;
-    margin-bottom: 10px;
-    display: block; /*Garante que cada label ocupe uma linha e empurre o input para baixo.*/
-    justify-content: left;
-    text-align: left;
-    margin-left: 45px;
-   
-}
+        input[type="submit"]:hover {
+            background-color: #f7b343;
+            color: #793e9f;
+        }
 
-input[type="text"],
-input[type="password"] {
-    clear:both;
-    align-items:center;
-    width: 400px;
-    height:30px;
-    padding: 8px;
-    border-radius: 15px;
-}
+        a {
+            color: #793e9f;
+        }
 
-input[type="submit"]{
-    clear:both;
-    background-color:  #fcbf5b;
-    color: #793e9f;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    width: 250px;
-    height:30px;
-    font-weight: bold;
-    font-size: 14px;
-    display: block; /* Garante que o botão seja tratado como um bloco */
-    margin: 40px auto 0; /* Centraliza o botão com margem superior de 30px */
-}
+        .footer {
+            font-size:12;
+            color:#e8c283;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
 
-input[type="submit"]:hover {
-    background-color: #e8c283;
-    font-weight: bold;
-    color: #793e9f;
-}
+        .alert {
+            background:#fff;
+            border-radius:28px;
+            width:400px;
+            padding:18px;
+            line-height:3em;
+            text-align:center;
+            margin:100px auto;
+            margin-top:60px;
+        }
 
+        img {
+            width: 10%;
+            position:relative;
+            margin-right: 15px;
+        }
 
-.footer{
-    font-size:12;
-    color:#e8c283;
-    text-align:center;
-}
+        .container{
+            margin: 100px auto;
+        }
 
-a{
-    color: #793e9f;
-}
+    </style>
+</head>
+<body>
 
-.value{
-    text-align: center;
-    margin-bottom:10px;
-}
-
-.alert{
-    background:#fff;
-    border-radius:28px;
-    width:400px;
-    padding:18px;
-    line-height:3em;
-    text-align:center;
-    margin:100px auto;
-}
-
-#container{
-    margin-top: 75px;
-}
-
-img{
-    width: 10%;
-    position:relative;
-    right:20px;
-    top:12px;
-  
-}
-</style>
-
-<h1>Faça login aqui!</h1>
+<h1>Faça seu login aqui:</h1>
 
 <div id="container">
     <form method="post" action="../process/processo_login.php">
         <div id="logo"></div>
-        <label>E-mail:</label><br>
+        <label>E-mail:</label>
         <input type="text" name="email_cliente" placeholder="Digite seu e-mail" required>
         <br><br>
-        <label>Senha:</label><br>
+        <label>Senha:</label>
         <input type="password" name="senha_cliente" placeholder="Digite sua senha" required>
         <br><br>
+        <p>Esqueceu sua senha? <a href="#">Clique aqui para alterá-la</a>.</p>
+        <p>Ainda não possui uma conta? <a href="cadastro.php">Clique aqui para se cadastrar</a>.</p>
         <input type="submit" value="Entrar">
     </form>
 </div>
 
 <br>
 
-<div class="footer">© By Hemilly e Larissa</div>
+<div class="footer">© By Hemilly e Larissa | 2025</div>
 
 <?php if (isset($_GET['erro'])){ ?>
     <div class="alert" role="alert">
-        <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png">Endereço de e-mail e/ou senha inválido(s).
+        <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png">Endereço de e-mail e/ou senha inválido(s). Por favor, digite novamente suas credenciais.
     </div>
 <?php } ?>
+
+</body>
+</html>
