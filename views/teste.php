@@ -11,6 +11,7 @@
             background-color: #793e9f;
             margin: 0;
             padding: 0;
+            margin-top: 200px;
         }
 
         h1 {
@@ -23,15 +24,17 @@
         .container{
             background:#fff;
             border-radius:28px;
-            width:50%;
+            width:35%;
             padding:18px;
-            margin: 40px auto;
-            margin-top: 100px;
+            margin: 10px auto;
+            position:relative;
+            top:100px;
+        
         }
 
         p {
             color: #333;
-            font-size: 18px;
+            font-size: 16px;
             text-align: center;
             margin-top: 50px;
             margin-bottom: 25px;
@@ -42,19 +45,22 @@
         }
 
         #logo {
-        background: #793e9f;
-        width: 120px;
-        height: 120px;
-        border-radius: 100%;
-        margin: -70px auto 20px;
-        border: 2px solid #fff;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: -70px auto 20px;
+            border: 3px solid #e8c283;
+            display: block;
+            background-color: #fff;
         }
 
         .footer{
             font-size:12;
             color:#e8c283;
             text-align: center;
-            margin-bottom: 20px;
+            position:relative;
+            top: 120px;
         }
         
     </style>
@@ -63,9 +69,9 @@
 <body>
 
 <div class="container">
-    <div id="logo"></div>
+    <img id="logo" src="../logo/logo.png" alt="Logo da Loja">
     <h1>E-mail e senha válidos, <br> seja bem vindo(a)!</h1>
-    <p class="redirect">Para voltar ao formulário de login, <a href="login.php">clique aqui</a>.</p>
+    <p class="redirect">Para retornar à página de login, <a href="login.php">clique aqui</a>.</p>
 </div>
 
 <br>

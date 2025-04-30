@@ -35,12 +35,12 @@
         }
 
         #logo {
-        background: #793e9f;
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin: -70px auto 20px;
-        border: 2px solid #fff;
+            background: #fff;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: -70px auto 20px;
+            border: 3px solid #e8c283;
         }
 
         label {
@@ -119,7 +119,7 @@
 
 <div id="container">
     <form method="post" action="../process/processo_login.php">
-        <div id="logo"></div>
+        <img id="logo" src="../logo/logo.png" alt="Logo da Loja">
         <label>E-mail:</label>
         <input type="text" name="email_cliente" placeholder="Digite seu e-mail" required>
         <br><br>

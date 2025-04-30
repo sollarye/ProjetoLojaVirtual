@@ -41,7 +41,6 @@ mysqli_query($conexao, $query);
             text-align: center;
             font-weight: bold;
             margin-top: 70px;
-            margin-bottom: 60px;
         }
         
         .container {
@@ -59,24 +58,23 @@ mysqli_query($conexao, $query);
             text-align: center;
         }
 
+        .title{
+            margin-bottom:85px;
+        }
+        
         .message {
-            margin-top: 20px;
-            padding: 12px 30px; /* Mesma estilização do botão */
-            border-radius: 30px;
-            background-color: #fcbf5b;
-            color: #793e9f;
-            font-weight: bold;
-            display: inline-block;
+            color: #333;
             text-align: center;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 32px;
         }
 
         .redirect {
-            margin-top: 20px;
-            font-size: 12;
-            color: #555;
+            margin-top: 30px;
+            margin-bottom:10px;
+            font-size: 16px;
+            color: #333;
         }
 
         .footer {
@@ -89,7 +87,6 @@ mysqli_query($conexao, $query);
 
         a {
             color: #793e9f;
-            font-size: 12;
         }
 
     </style>
@@ -97,12 +94,12 @@ mysqli_query($conexao, $query);
 
 <body>
 
-<h1>Dados Cadastrados</h1>
+<h1 class="title">Dados Cadastrados</h1>
 
 <div class="container">
     <img src="https://static.vecteezy.com/system/resources/thumbnails/011/858/556/small/green-check-mark-icon-with-circle-tick-box-check-list-circle-frame-checkbox-symbol-sign-png.png" alt="Confirmação de sucesso">
-    <p class="message">Seus dados foram cadastrados com sucesso!</p>
-    <p class="redirect">Para voltar à página de cadastro, <a href="cadastro.php">clique aqui</a>.</p>
+    <h1 class="message">Seus dados foram <br> cadastrados com sucesso!</h1>
+    <p class="redirect">Para retornar à página de cadastro, <a href="cadastro.php">clique aqui</a>.</p>
 </div>
 
 <div class="footer">© By Hemilly e Larissa | 2025</div>

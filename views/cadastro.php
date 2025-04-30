@@ -103,12 +103,12 @@
         }
 
         #logo {
-            background: #793e9f;
+            background: #fff;
             width: 120px;
             height: 120px;
             border-radius: 50%;
             margin: -70px auto 20px;
-            border: 2px solid #fff;
+            border: 3px solid #e8c283;
         }
 
     </style>    
@@ -118,7 +118,7 @@
 <h1>Cadastre-se aqui:</h1><br>
 <div class="container">
     <form method="post" action="processo_cadastro.php">
-        <div id="logo"></div>
+        <img id="logo" src="../logo/logo.png" alt="Logo da Loja">
         <label class="nome" >Nome Completo:</label>
         <input type="text" name="nome_cliente" placeholder="Digite o seu nome" required>
         <br><br>
