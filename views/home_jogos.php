@@ -5,65 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+<!--CSS e BOOTSTRAP-->
+
+
 </head>
 <style>
-    nav{
-        clear:both;
-        height:120px;
-        width:100%;
-        background:rgb(59, 5, 95);
-        padding:5px;
-    }
+body{
+    margin:0;
+    padding:0;
+    font-family:'Open Sans', sans-serif;
+}
 
-    #logo{
-        clear:both;
-        height:90px;
-        width:90px;
-    }
+nav{
+    background:rgb(85, 45, 185);
+    height:150px;
+    padding:0 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-    #menu{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        border:1.2px solid white;
-        width:600px;
-        height:25px;
-        margin-left: 60%;
-        
+.nav-item{
+    display:flex;
+    align-items:center;
+}
 
-        
-        
-    }
+#arealogo img{
+    height:110px;
+    width:auto;
+}
 
-    li{
-        list-style:none;
-        display:inline;
-        padding:15px;
-        text-decoration:none;
-    }
+#menu{
+    background: rgba(42, 9, 124, 0.4);
+    border:2px solid rgb(32, 10, 87);
+    border-radius:30px;
+    height:30px;
+    width:30%;
+    padding:10px 20px;
+    margin-left:145px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
 
-    ul{
-       
-       
-    }
+#menu ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+    padding:0;
+    margin:0;
+    font-size:22px
+}
 
-    a{
-        color:white; 
-        font-size:16px;
+#menu ul li a{
+    color:#ede3a8;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-    }
-
+#pesquisa{
+    width:300px;
+    height:30px;
+    border-radius:30px;
+    padding:18px;
+    font-size: 14px;
+    margin-right: 15px;
+}
 
  </style>
 <body>
 
 
     <nav>
-        <div id="logo">
-            <img id="logo" src="../logo/logo.png" alt="Logo da Loja">
+        <div  class="nav-item" id="arealogo">
+            <img src="../logo/logo.png" alt="Logo da Loja">
          </div>
 
-        <div id="menu">
+        <div class="nav-item" id="menu">
             <ul>
                 <li><a href=#>Perfil</a></li>
                 <li><a href=#>Categorias</a></li>
@@ -71,8 +90,8 @@
             </ul>
         </div>
 <!--Caixa de Pesquisa-->
-        <div id="caixapesqusia">
-             <input type="search" name="pesqusa" id="pesquisa">
+        <div class="nav-item" id="caixapesquisa">
+             <input type="search" name="pesqusa" id="pesquisa" placeholder="Pesquise por algum Jogo ou Produto">
         </div>
     </nav>
     
