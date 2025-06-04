@@ -52,7 +52,8 @@
         
         input[type="date"],
         input[type="text"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="email"] {
             align-items:center;
             width: 400px;
             height:30px;
@@ -111,6 +112,29 @@
             border: 3px solid #e8c283;
         }
 
+        .alert {
+            background: #fff;
+            border-radius: 12px;
+            width: 500px;
+            padding: 15px;
+            text-align: center;
+            margin: 20px auto;
+            color: black;
+            
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .alert img {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+
     </style>    
 </head>
  
@@ -126,7 +150,7 @@
         <input type="date" name="data_nasc" placeholder="Digite a data" required>
         <br><br>
         <label>E-mail:</label>
-        <input type="text" name="email_cliente" placeholder="Digite o seu e-mail" required>
+        <input type="email" name="email_cliente" placeholder="Digite o seu e-mail" required>
         <br><br>
         <label>Senha:</label>
         <input type="password" name="senha_cliente" placeholder="Crie sua senha" required>
@@ -139,6 +163,12 @@
 <br>
  
 <div class="footer">© By Hemilly e Larissa | 2025</div>
+
+<?php if (isset($_GET['erro'])){ ?>
+    <div class="alert" role="alert">
+        <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" m>E-mail inválido. Por favor, insira um e-mail válido <br>(gmail.com, outlook.com, hotmail.com, ou yahoo.com).
+    </div>
+<?php } ?>
  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
  

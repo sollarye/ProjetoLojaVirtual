@@ -12,10 +12,22 @@ $data = $_POST['data_nasc'];
 $email = $_POST['email_cliente'];
 $senha = $_POST['senha_cliente'];
 
-$query = "INSERT INTO cliente (nome_cliente, data_nasc, email_cliente, senha_cliente)
+// Verificando se é um email válido
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header("Location: cadastro.php?erro=1"); // redireciona com erro
+    exit;}
+else{
+    $query = "INSERT INTO cliente (nome_cliente, data_nasc, email_cliente, senha_cliente)
             VALUES('$nome','$data','$email','$senha')";
 
-mysqli_query($conexao, $query);
+    mysqli_query($conexao, $query);
+}
+
+
+// Lista de extensões permitidas
+$extensoesPermitidas = ["gmail.com", "hotmail.com", "yahoo.com", "outlook.com"];
+$partesEmail = explode("@", $email);
+$extensao = strtolower($partesEmail[1]);
 
 ?>
 
