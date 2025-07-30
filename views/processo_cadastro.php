@@ -112,6 +112,7 @@ $extensao = strtolower($partesEmail[1]);
     <img src="https://static.vecteezy.com/system/resources/thumbnails/011/858/556/small/green-check-mark-icon-with-circle-tick-box-check-list-circle-frame-checkbox-symbol-sign-png.png" alt="Confirmação de sucesso">
     <h1 class="message">Seus dados foram <br> cadastrados com sucesso!</h1>
     <p class="redirect">Para retornar à página de cadastro, <a href="cadastro.php">clique aqui</a>.</p>
+    <p class="redirect">Para exibir os dados cadastrados, <a href="./visualizar_dados.php">clique aqui</a>.</p>
 </div>
 
 <div class="footer">© By Hemilly e Larissa | 2025</div>
