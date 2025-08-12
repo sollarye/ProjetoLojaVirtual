@@ -33,11 +33,12 @@ $consulta_dados = mysqli_query($conexao, $query);
         }
 
         .linkCad{
-            font-size: 20px;
+            font-size: 18px;
             display:flex;
             justify-content:center;
             color: white;
             margin-top: 20px;
+            margin-bottom: 50px;
         }
 
         a{
@@ -104,7 +105,7 @@ $consulta_dados = mysqli_query($conexao, $query);
 
         h1{
             margin-top:200px;
-            margin-bottom: 100px;
+            margin-bottom: 0px;
             text-align: center;
             color:#e8c283;
             font-weight: bold;
@@ -114,8 +115,7 @@ $consulta_dados = mysqli_query($conexao, $query);
             font-size:12;
             color:#e8c283;
             text-align: center;
-            margin-top: 10px;
-            margin-bottom: 20px;
+            margin-top: 40px;
         }
         
     </style>
@@ -125,6 +125,9 @@ $consulta_dados = mysqli_query($conexao, $query);
    
     <div id="container">  
         <h1>Visualização de Dados Cadastrados</h1>
+        <div class='linkCad'>
+            <p>Para retornar à página de cadastro, <a href="cadastro.php">clique aqui</a>.</p>
+        </div>
         <div class="tabela">
             <table>
                 <thead>
@@ -156,9 +159,6 @@ $consulta_dados = mysqli_query($conexao, $query);
          
     </div>
 
-    <div class='linkCad'>
-        <p>Clique <a href="cadastro.php">aqui</a> para retornar à página de cadastro.</p>
-    </div>
     <div class="footer">© By Hemilly e Larissa | 2025</div>
 
     
