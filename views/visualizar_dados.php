@@ -26,19 +26,28 @@ $consulta_dados = mysqli_query($conexao, $query);
             background:linear-gradient(to left,rgb(85, 45, 185), #0b0124);
             margin: 0;
             padding: 0;
-            margin-top: 200px;
             display:flex;
             align-items:center;
             flex-direction:column;
             height:100vh
         }
 
-        #container{
-           
+        .linkCad{
+            font-size: 20px;
+            display:flex;
+            justify-content:center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        a{
+            color: #e8c283;
+        }
+
+        #container .tabela{
             display:flex;
             align-items:center;
             justify-content:center;
-          
         }
 
         .tabela{
@@ -64,7 +73,7 @@ $consulta_dados = mysqli_query($conexao, $query);
             height:50px;
             width:150px;
             margin-left:20px;
-             border-right:2px solid rgba(184, 172, 169, 0.61);
+            border-right:2px solid rgba(184, 172, 169, 0.61);
         }
 
         th{
@@ -92,12 +101,30 @@ $consulta_dados = mysqli_query($conexao, $query);
         .senha{
             border-right:#ffff
         }
+
+        h1{
+            margin-top:200px;
+            margin-bottom: 100px;
+            text-align: center;
+            color:#e8c283;
+            font-weight: bold;
+        }
+        
+        .footer{
+            font-size:12;
+            color:#e8c283;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
         
     </style>
 
 </head>
 <body>
+   
     <div id="container">  
+        <h1>Visualização de Dados Cadastrados</h1>
         <div class="tabela">
             <table>
                 <thead>
@@ -124,9 +151,16 @@ $consulta_dados = mysqli_query($conexao, $query);
                 }
                     ?>
                 </tbody>
-         </div>
+            </TABLE>
+        </div>
+         
     </div>
-      
+
+    <div class='linkCad'>
+        <p>Clique <a href="cadastro.php">aqui</a> para retornar à página de cadastro.</p>
+    </div>
+    <div class="footer">© By Hemilly e Larissa | 2025</div>
+
     
 </body>
 </html>
