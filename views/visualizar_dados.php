@@ -103,12 +103,11 @@ $consulta_dados = mysqli_query($conexao, $query);
             border-right:#ffff
         }
 
-        h1{
-            margin-top:200px;
-            margin-bottom: 0px;
-            text-align: center;
+        h1 {
             color:#e8c283;
+            text-align: center;
             font-weight: bold;
+            margin-top: 70px;
         }
         
         .footer{
