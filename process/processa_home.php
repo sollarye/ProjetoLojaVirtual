@@ -1,15 +1,15 @@
 <?php
 
-#iniciar seção
+// Inicia a sessão
 session_start();
 
-# Base de dados
+// Base de dados
 include 'db.php';
 
-# Cabeçalho
+// Cabeçalho
 include '../header.php';
 
-# Conteúdo da página
+// Conteúdo da página
 
 if(isset($_SESSION['login'])){
     if(isset($_GET['pagina'])){
@@ -32,7 +32,7 @@ switch($pagina) {
     break;
 }
 
-# Rodapé
+// Rodapé
 include '../footer.php';
 
 # HOME - TELA DOS JOGOS

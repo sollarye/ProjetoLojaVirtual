@@ -6,6 +6,7 @@ $senha = "";
 $db = "controle";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $db);
+
 $query = "SELECT *FROM CLIENTE";
 $consulta_dados = mysqli_query($conexao, $query);
 
@@ -26,14 +27,15 @@ $consulta_dados = mysqli_query($conexao, $query);
             background:linear-gradient(to left,rgb(85, 45, 185), #0b0124);
             margin: 0;
             padding: 0;
-            display:flex;
-            align-items:center;
-            flex-direction:column;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
             height:100vh
+
         }
 
         .linkCad{
-            font-size: 18px;
+            font-size: 16px;
             display:flex;
             justify-content:center;
             color: white;
@@ -43,6 +45,7 @@ $consulta_dados = mysqli_query($conexao, $query);
 
         a{
             color: #e8c283;
+            
         }
 
         #container .tabela{
@@ -142,6 +145,7 @@ $consulta_dados = mysqli_query($conexao, $query);
                 <tbody>
                     <?php
 
+                // Loop que percorre todas as linhas retornadas da consulta
                 while($linha = mysqli_fetch_array($consulta_dados)){
                     echo'<tr>';
                         echo'<td id="ClienteID">'.$linha['id_cliente'].'</td>';

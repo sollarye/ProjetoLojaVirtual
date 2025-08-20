@@ -34,7 +34,4 @@ if (in_array($extensao, $extensoesPermitidas)){
 else {
     echo "Domínio (sufixo) não permitido. Aceitamos apenas: " . implode( ", ", $extensoesPermitidas);
 }
-else {
-    echo "Acesso inválido."
-}
 ?>

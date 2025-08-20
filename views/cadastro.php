@@ -128,9 +128,9 @@
         }
 
         .alert img {
-            width: 25px;
-            height: 25px;
-            margin-right: 5px;
+            width: 40px;
+            height: 40px;
+            margin-right: 20px;
             margin-left: 5px;
         }
 
@@ -164,7 +164,8 @@
  
 <div class="footer">© By Hemilly e Larissa | 2025</div>
 
-<?php if (isset($_GET['erro'])){ ?>
+
+<?php if (isset($_GET['erro'])){ // Exibe uma mensagem de erro caso o e-mail inserido pelo usuário for inválido. ?> 
     <div class="alert" role="alert">
         <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" m>E-mail inválido. Por favor, insira um e-mail válido <br>(gmail.com, outlook.com, hotmail.com, ou yahoo.com).
     </div>

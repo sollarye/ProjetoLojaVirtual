@@ -136,7 +136,7 @@
 
 <div class="footer">© By Hemilly e Larissa | 2025</div>
 
-<?php if (isset($_GET['erro'])){ ?>
+<?php if (isset($_GET['erro'])){ // Exibe uma mensagem de erro caso as credenciais inseridas pelo usuário estiverem incorretas. ?>
     <div class="alert" role="alert">
         <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png">Endereço de e-mail e/ou senha inválido(s). Por favor, digite novamente suas credenciais.
     </div>

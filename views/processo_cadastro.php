@@ -7,6 +7,7 @@ $db = "controle";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $db);
 
+// Recebe os dados do formulário
 $nome = $_POST['nome_cliente'];
 $data = $_POST['data_nasc'];
 $email = $_POST['email_cliente'];
@@ -14,9 +15,11 @@ $senha = $_POST['senha_cliente'];
 
 // Verificando se é um email válido
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header("Location: cadastro.php?erro=1"); // redireciona com erro
+    header("Location: cadastro.php?erro=1"); // Redireciona com erro
     exit;}
-else{
+    
+// Se o email for válido, os dados serão inseridos no banco de dados
+else{ 
     $query = "INSERT INTO cliente (nome_cliente, data_nasc, email_cliente, senha_cliente)
             VALUES('$nome','$data','$email','$senha')";
 
@@ -66,8 +69,8 @@ $extensao = strtolower($partesEmail[1]);
             height: 450px;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Alinha os itens no centro verticalmente */
-            align-items: center; /* Alinha os itens no centro horizontalmente */
+            justify-content: center; 
+            align-items: center; 
             text-align: center;
         }
 
