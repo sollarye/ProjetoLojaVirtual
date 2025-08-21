@@ -8,92 +8,31 @@
 
 <!--CSS e BOOTSTRAP-->
 
-
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <style>
-body{
-    margin:0;
-    padding:0;
-    font-family:'Open Sans', sans-serif;
-}
+    img{
+        width:74px; 
+        height:68px;
+        border-radius:100px;
+        border:2px solid yellow;
+    }
 
-nav{
-    background:rgb(85, 45, 185);
-    height:150px;
-    padding:0 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.nav-item{
-    display:flex;
-    align-items:center;
-}
-
-#arealogo img{
-    height:110px;
-    width:auto;
-}
-
-#menu{
-    background: rgba(42, 9, 124, 0.4);
-    border:2px solid rgb(32, 10, 87);
-    border-radius:30px;
-    height:30px;
-    width:30%;
-    padding:10px 20px;
-    margin-left:145px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-#menu ul{
-    display:flex;
-    gap:20px;
-    list-style:none;
-    padding:0;
-    margin:0;
-    font-size:22px
-}
-
-#menu ul li a{
-    color:#ede3a8;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-#pesquisa{
-    width:300px;
-    height:30px;
-    border-radius:30px;
-    padding:18px;
-    font-size: 14px;
-    margin-right: 15px;
-}
-
+    nav{
+        background-color:#0b0124;
+    }
  </style>
 <body>
-
-
-    <nav>
-        <div  class="nav-item" id="arealogo">
-            <img src="../logo/logo.png" alt="Logo da Loja">
-         </div>
-
-        <div class="nav-item" id="menu">
-            <ul>
-                <li><a href=#>Perfil</a></li>
-                <li><a href=#>Categorias</a></li>
-                <li><a href=#>teste</a></li>
-            </ul>
-        </div>
-<!--Caixa de Pesquisa-->
-        <div class="nav-item" id="caixapesquisa">
-             <input type="search" name="pesqusa" id="pesquisa" placeholder="Pesquise por algum Jogo ou Produto">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="../logo/logo.png">
+            </div>
         </div>
     </nav>
     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
 </body>
 </html>
