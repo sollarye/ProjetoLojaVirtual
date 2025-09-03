@@ -41,7 +41,7 @@ $extensao = strtolower($partesEmail[1]);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmação de Cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <meta http-equiv="refresh" content="10;url=visualizar_dados.php">
+    <meta http-equiv="refresh" content="5;url=visualizar_dados.php">
     <style>
 
         body {
@@ -122,7 +122,7 @@ $extensao = strtolower($partesEmail[1]);
 <div class="container">
     <img src="https://static.vecteezy.com/system/resources/thumbnails/011/858/556/small/green-check-mark-icon-with-circle-tick-box-check-list-circle-frame-checkbox-symbol-sign-png.png" alt="Confirmação de sucesso">
     <h1 class="message">Seus dados foram <br> cadastrados com sucesso!</h1>
-    <p class="redirect">Você será redirecionado para a página de visualização de dados em 10 segundos.</p>
+    <p class="redirect">Você será redirecionado para a página de visualização de dados em 5 segundos.</p>
     <p class="redirect-cadastro">Se você não quiser visualizar os dados, <a href="cadastro.php">clique aqui</a> para retornar à página de cadastro.</p>
 </div>
 
