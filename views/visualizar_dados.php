@@ -132,11 +132,43 @@ $consulta_dados = mysqli_query($conexao, $query);
             text-align: center;
             margin-top: 40px;
         }
+
+        .alert-confirmacao {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 40%;
+            margin: 20px auto;
+            padding: 12px 20px;
+            border-radius: 12px;
+            background-color: #d4edda;
+            color: #155724; 
+            font-weight: bold;
+        }
+
+        .alert-confirmacao img {
+            width: 24px;
+            height: 24px;
+        }
+        .alert-confirmacao a {
+            justify-items: justify;
+            color: #fc4759;
+
+        }
+
+
         
     </style>
 
 </head>
 <body>
+
+<?php if (isset($_GET['deletado'])) { ?>
+    <div class="alert-confirmacao" role="alert">
+        <img src="https://cdn-icons-png.flaticon.com/512/14024/14024968.png" alt="Confirmado">Usuário deletado com sucesso! <a href='visualizar_dados.php'>Dispensar mensagem</a>
+    </div>
+<?php } ?>
    
     <div id="container">  
         <h1>Visualização de Dados Cadastrados</h1>
