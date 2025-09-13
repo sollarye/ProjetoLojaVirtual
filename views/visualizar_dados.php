@@ -30,7 +30,7 @@ $consulta_dados = mysqli_query($conexao, $query);
             display: flex;
             align-items: center;
             flex-direction: column;
-            height:100vh
+            height:100vh;
 
         }
 
@@ -53,22 +53,21 @@ $consulta_dados = mysqli_query($conexao, $query);
         }
 
         #container .tabela{
-            display:flex;
-            align-items:center;
-            justify-content:center;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
         }
 
         .tabela{
             width:95%;
-            background:#ffff;
-            background:#ffff;
-            border-radius:20px;
-            padding-left:20px;
-            padding-right:20px;
-            padding-bottom:20px;
-            padding-top:10px;
+            background: #ffff;
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-top: 10px;
+            margin: 0 auto;
         }
-
 
         thead{
             height:4px;
@@ -76,59 +75,60 @@ $consulta_dados = mysqli_query($conexao, $query);
 
         tbody{
 
-            border-left:2px solid rgba(184, 172, 169, 0.61);
+            border-left: 2px solid rgba(184, 172, 169, 0.61);
+            border-right: 2px solid rgba(184, 172, 169, 0.61);
         }
 
         th,td{
-            padding-left:10px;
-            padding-right:5px;
-            border-bottom:2px solid rgba(50,0,131,1);
-            height:50px;
-            width:150px;
-            margin-left:20px;
-            border-right:2px solid rgba(184, 172, 169, 0.61);
+            padding-left: 10px;
+            padding-right: 5px;
+            border-bottom: 2px solid rgba(50,0,131,1);
+            height: 50px;
+            width: 150px;
+            margin-left: 20px;
+            border-left: 2px solid rgba(184, 172, 169, 0.61);
         }
 
         .td1{
-            border-top:2px solid rgba(50,0,131,1);
+            border-top: 2px solid rgba(50,0,131,1);
         }
         
         th{
-            width:250px
+            width: 250px;
         }
 
         h2{
-            margin-top:100px;
-            width:50%
+            margin-top: 100px;
+            width: 50%;
         }
 
        
         #nomeTd tr td{
-            width:300px;
+            width: 300px;
         }
 
         #nome{
-            width:300px;
+            width: 300px;
         }
 
         #idCliente{
-            width:100px
+            width: 100px
         }
 
         .senha{
-            border-right:#ffff
+            border-right: #ffff
         }
 
         h1 {
-            color:#e8c283;
+            color: #e8c283;
             text-align: center;
             font-weight: bold;
             margin-top: 70px;
         }
         
         .footer{
-            font-size:12;
-            color:#e8c283;
+            font-size: 12;
+            color: #e8c283;
             text-align: center;
             margin-top: 40px;
         }
@@ -154,10 +154,7 @@ $consulta_dados = mysqli_query($conexao, $query);
         .alert-confirmacao a {
             justify-items: justify;
             color: #fc4759;
-
         }
-
-
         
     </style>
 
@@ -169,11 +166,17 @@ $consulta_dados = mysqli_query($conexao, $query);
         <img src="https://cdn-icons-png.flaticon.com/512/14024/14024968.png" alt="Confirmado">Usuário deletado com sucesso! <a href='visualizar_dados.php'>Dispensar mensagem</a>
     </div>
 <?php } ?>
+
+<?php if (isset($_GET['editado'])) { ?>
+    <div class="alert-confirmacao" role="alert">
+        <img src="https://cdn-icons-png.flaticon.com/512/14024/14024968.png" alt="Confirmado">Dados do usuário atualizados com sucesso! <a href='visualizar_dados.php'>Dispensar mensagem</a>
+    </div>
+<?php } ?>
    
     <div id="container">  
         <h1>Visualização de Dados Cadastrados</h1>
         <div class='linkCad'>
-            <p>Para retornar à página de cadastro, <a class='redirecionamento_cadastro'href="cadastro.php">clique aqui</a>.</p>
+            <p>Para retornar à página de cadastro, <a class='redirecionamento_cadastro' href="cadastro.php">clique aqui</a>.</p>
         </div>
         <div class="tabela">
             <table>
@@ -198,7 +201,8 @@ $consulta_dados = mysqli_query($conexao, $query);
                         echo'<td>'.$linha['data_nasc'].'</td>';
                         echo'<td>'.$linha['email_cliente'].'</td>';
                         echo'<td class="senha">'.$linha['senha_cliente'].'</td>';
-                        echo'<td class=td1><a href="../process/processa_delete_usuario.php?id='.$linha['id_cliente'].'">Deletar</a></td></tr>';       
+                        echo'<td class=td1><a href="edita_usuario.php?id='.$linha['id_cliente'].'">Editar</a></td>';
+                        echo'<td class=td1><a href="../process/processa_delete_usuario.php?id='.$linha['id_cliente'].'">Deletar</a></td></tr>';
                 }
                     ?>
                 </tbody>

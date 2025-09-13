@@ -7,14 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family:'Open Sans', sans-serif;
-            background:linear-gradient(to left,rgb(85, 45, 185), #0b0124);
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to left,rgb(85, 45, 185), #0b0124);
             margin: 0;
             padding: 0;
         }
 
         h1 {
-            color:#e8c283;
+            color: #e8c283;
             text-align: center;
             font-weight: bold;
             margin-top: 70px;
@@ -61,7 +61,7 @@
         }
 
         input[type="submit"] {
-            background-color: #fcbf5b;
+            background-color: #f3c780ff;
             color: #793e9f;
             padding: 12px 30px;
             border: none;
@@ -74,7 +74,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #f7b343;
+            background-color: #f9cc83ec;
             color: #793e9f;
         }
 

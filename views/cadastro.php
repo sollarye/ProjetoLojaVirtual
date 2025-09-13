@@ -25,7 +25,7 @@
         form{
             background-color: #fff;
             border-radius: 28px;
-            width: 80%;
+            width: 50%;
             max-width: 700px; /*O formulário não pode passar de 500px de largura, mesmo que o contêiner ou a janela do navegador seja maior.*/
             padding: 20px;
             margin: 30px auto;
@@ -47,7 +47,7 @@
             display: block; /*Garante que cada label ocupe uma linha e empurre o input para baixo.*/
             justify-content: left;
             text-align: left;
-            margin-left: 135px;
+            margin-left: 110px;
         }
         
         input[type="date"],
@@ -62,22 +62,22 @@
         }
 
         input[type="submit"] {
-        background-color: #fcbf5b;
-        color: #793e9f;
-        padding: 12px 30px; /* Aumentei o padding para dar mais espaço ao botão */
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        font-weight: bold;
-        font-size: 16px; /* Ajustei o tamanho da fonte */
-        width: auto; /* Deixei o botão ajustar o tamanho automaticamente com base no conteúdo */
-        display: inline-block; /* Melhor controle sobre o tamanho do botão */
-        margin: 30px auto 0; /* Mantive a centralização */
-        text-align: center; /* Garante que o texto fique centralizado */
+            background-color: #f3c780ff;
+            color: #793e9f;
+            padding: 12px 30px; /* Aumentei o padding para dar mais espaço ao botão */
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px; /* Ajustei o tamanho da fonte */
+            width: auto; /* Deixei o botão ajustar o tamanho automaticamente com base no conteúdo */
+            display: inline-block; /* Melhor controle sobre o tamanho do botão */
+            margin: 30px auto 0; /* Mantive a centralização */
+            text-align: center; /* Garante que o texto fique centralizado */
         }
 
         input[type="submit"]:hover {
-            background-color: #f7b343;
+            background-color: #f9cc83ec;
             font-weight: bold;
             color: #793e9f;
         }
